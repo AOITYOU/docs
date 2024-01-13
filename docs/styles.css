@@ -1,0 +1,130 @@
+/* ページ全体のスタイル */
+body {
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    background: linear-gradient(70deg, #0093E9, #87dbd2);
+    overflow-x:hidden;
+}
+
+/* ヘッダー */
+header {
+    font-family: 'EB Garamond', serif;
+    background-color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 95%, #000000 5%, #000000 100%);
+    width: 100%; /* 横幅 */
+    height: 100px; /* 縦幅 */
+    display: flex; /* レイアウトにFlexboxを使用 */
+    align-items: center; /* 垂直方向の中央寄せ */
+    justify-content: space-between; /* タイトルとナビゲーションの間にスペースを配置 */
+    position: fixed; /* 固定位置に設定 */
+    top: 0; /* 画面上部に配置 */
+    left: 0;
+    right: 0;
+    z-index: 9999; /* 他の要素より前面に表示 */
+}
+
+/* ヘッダータイトル */
+header h1 {
+    margin: 10px;
+    margin-left: 5%;
+    margin-right: auto;
+    letter-spacing: 4px;
+    color: #ffffff; /* 文字の中の色 */
+    text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, /* 文字周りの色 */
+    -1px 1px 0 #000000,  1px -1px 0 #000000,
+    1px 0 0 #000000, -1px  0 0 #000000,
+    0 1px 0 #000000,  0 -1px 0 #000000;
+}
+
+/* ヘッダーリンク */
+nav ul {
+    list-style-type: none;
+    letter-spacing: 2px; /* 文字間隔 */
+    display: flex; /* レイアウトにFlexboxを使用 */
+    margin-right: 20px;
+    color: #000000; /* なんかいじるとバグる */
+}
+
+/* ヘッダーリンク2 */
+nav ul li {
+    margin-right: 25px; /* リンク間の間隔 */
+    font-size: 17px; /* リンクのサイズ */
+    text-decoration: underline;
+}
+
+/* リンク色 */
+a{
+ color: #000000; /* なんかいじるとバグる */
+ }
+
+/*ホバーエフェクトの設定*/
+.hover-effect {
+    position: relative; /* 相対位置指定 */
+    transition: top 1s ease; /* 上方向への移動をアニメーション化 */
+}
+
+.hover-effect:hover {
+    top: -2px; /* カーソルを持っていくと上に移動 */
+}
+
+/* リンクジャンプ先余白設定 */
+h2.anchor{
+    display: block;
+    padding-top: 110px;
+}
+
+/* メインコンテンツ */
+main {
+    margin: 10px auto;
+    padding: 20px;
+    padding-bottom: 300px;
+    width: 94%;
+    background-color: #ffffff;
+    box-shadow: 0 0 3px #000000;
+}
+
+/* セクション内の画像と文章のスタイル調整 */
+section {
+    position: relative; /* 相対位置指定 */
+}
+
+section img {
+    max-width: 50%; /* 最大幅を親要素に合わせる */
+    height: auto; /* 高さを自動調整 */
+    float: left; /* 画像を左にフロートさせる（文章が画像の右に配置される） */
+    margin-right: 20px; /* 画像と文章の間隔 */
+}
+
+/* 改行のために必要な<p>の設定 */
+section p {
+    clear: left; /* 左にフロートしている要素の下に配置する（画像の下に文章を配置） */
+}
+
+/* セクションタイトル */
+h2 {
+    letter-spacing: 1px; /* 文字間隔 */
+}
+
+/* フッタースタイル */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    bottom: 0; /* ページの下端に配置 */
+    width: 100%; /* ページ幅に合わせる */
+    height:90px;
+    line-height:90px;
+    letter-spacing: 1px; /* 文字間隔 */
+}
+
+  /* スクロールバーのデザイン */
+  ::-webkit-scrollbar{
+    width: 5px;
+ }
+ ::-webkit-scrollbar-track{
+    background-color: #ccc;
+ }
+ ::-webkit-scrollbar-thumb{
+    background-color: #515c69;
+ }
+
